@@ -31,10 +31,10 @@ So that I can enjoy myself away from the daily grind
 I would like to be able to play rock/paper/scissors
 ```
 
-Hints on functionality
+Requirements:
 
-- the user should be able to enter their name before the game
-- the user will be presented the choices (rock, paper and scissors)
-- the user can choose one option
-- the bot (Zoe 5.1) will choose a random option
-- a winner will be declared
+- The user should be able to enter their name before the game
+- The user will be presented the choices (rock, paper and scissors)
+- The user can choose one option
+- The bot (Zoe 5.1) will choose a random option
+- A winner will be declared
