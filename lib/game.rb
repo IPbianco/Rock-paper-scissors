@@ -12,8 +12,8 @@ class Game
     @judge.call(p_weapon, c_weapon)
   end
 
-  def self.store(game)
-    @game = game
+  def self.store(player)
+    @game = Game.new(player)
   end
 
   def self.show

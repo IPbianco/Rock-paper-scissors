@@ -6,34 +6,34 @@
       background-image: url(https://fictionmachine.files.wordpress.com/2015/12/bttf3_08.jpg);
     }
 
-		h1 {
-			color: tomato;
-			font-family: "Brush Script MT", cursive;
-			font-size: 150px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 500;
-			line-height: 26.4px;
-			text-align: center;
-		}
+    h1 {
+      color: tomato;
+      font-family: "Brush Script MT", cursive;
+      font-size: 150px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+      text-align: center;
+    }
 
-		h2 {
-			color: antiquewhite;
-			font-family: "Impact", cursive;
-			font-size: 75px;
-			font-style: normal;
-			font-variant: normal;
-			font-weight: 500;
-			line-height: 26.4px;
-			text-align: center;
-		}
+    h2 {
+      color: antiquewhite;
+      font-family: "Impact", cursive;
+      font-size: 75px;
+      font-style: normal;
+      font-variant: normal;
+      font-weight: 500;
+      line-height: 26.4px;
+      text-align: center;
+    }
 
-		form {
+    form {
       text-align: center;
       vertical-align: baseline;
     }
 
-		button[type=submit] {
+    button[type=submit] {
       color: antiquewhite;
       font-family: "Brush Script MT", cursive;
       font-size: 30px;
@@ -52,16 +52,16 @@
 			<h1>Welcome <%= @player.name %></h1>
 			<h2>Please select a weapon</h2>
 
-			<form action= "/rock" method='post'>
-				  <button type="submit">Rock</button>
+			<form action= "/weapon" method='post'>
+				  <button type="submit" name="weapon" value="Rock">Rock</button>
 			</form>
 
-			<form action= "/paper" method='post'>
-				  <button type="submit">Paper</button>
+			<form action= "/weapon" method='post'>
+				  <button type="submit" name="weapon" value="Paper">Paper</button>
 			</form>
 
-			<form action= "/scissors" method='post'>
-				  <button type="submit">Scissors</button>
+			<form action= "/weapon" method='post'>
+				  <button type="submit" name="weapon" value="Scissors">Scissors</button>
 			</form>
 		<% else %>
 			<h1> <%= @result %> </h1><br>

@@ -9,6 +9,7 @@ require_relative './lib/weapon_cabinet'
 require_relative './lib/weapon'
 
 class Rps < Sinatra::Base
+
   enable :sessions
 
   get '/' do
@@ -17,7 +18,7 @@ class Rps < Sinatra::Base
 
   post '/names' do
     player = Player.new(params[:player_name])
-    Game.store(Game.new(player))
+    Game.store(player)
     redirect('/play')
   end
 
@@ -32,28 +33,10 @@ class Rps < Sinatra::Base
     redirect('/play')
   end
 
-  post '/rock' do
+  post '/weapon' do
     computer = Game.show.computer
     player = Game.show.player
-    player_weapon = player.pick(:Rock).name
-    computer_weapon = computer.pick_weapon.name
-    session[:result] = Game.show.result(player_weapon, computer_weapon)
-    redirect('/play')
-  end
-
-  post '/paper' do
-    computer = Game.show.computer
-    player = Game.show.player
-    player_weapon = player.pick(:Paper).name
-    computer_weapon = computer.pick_weapon.name
-    session[:result] = Game.show.result(player_weapon, computer_weapon)
-    redirect('/play')
-  end
-
-  post '/scissors' do
-    computer = Game.show.computer
-    player = Game.show.player
-    player_weapon = player.pick(:Scissors).name
+    player_weapon = player.pick(params[:weapon]).name
     computer_weapon = computer.pick_weapon.name
     session[:result] = Game.show.result(player_weapon, computer_weapon)
     redirect('/play')

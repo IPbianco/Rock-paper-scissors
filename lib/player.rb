@@ -7,6 +7,6 @@ class Player
   end
 
   def pick(weapon)
-    @weapon_cabinet.release(weapon)
+    @weapon_cabinet.release(weapon.to_sym)
   end
 end
