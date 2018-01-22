@@ -1,22 +1,40 @@
-# RPS Challenge
+# Rock, paper, scissors!
 
-The RPS challenge is the third weekend challenge at Makers Academy. The request
-was to build an app to simulate a game of Rock, Paper, Scissors. The instructions
-can be found in the "INSTRUCTIONS.md" file.
+This app allows the user to play a game of Rock, paper, scissors against a sneaky bot called Zoe 5.1. 
+You can check it out here: https://ipbianco-rps.herokuapp.com/
 
-This is my proposed solution using Ruby.
+The application was built in one weekend using technologies like Ruby, HTML, CSS, Sinatra, RSpec and Capybara
 
-The main class in this project is Game. A game consists of a Player, a Computer
-and a Judge.
+## Getting started
+```
+$ git clone https://github.com/IPbianco/Rock-paper-scissors.git
+$ bundle install
+```
+## Usage
+```
+$ rackup
+```
+Navigate to http://localhost:9292/
+## Running tests
+```
+$ rspec
+```
+## User stories
 
-The user runs the app, enters his name and clicks play. The system welcomes him
-and asks him to pick a weapon.
+```
+As a user
+So that I can see my name in lights
+I would like to register my name before playing an online game
 
-When the user picks a weapon from the options given the app tells the player to
-pick the selected weapon from the weapons cabinet. After this, it tells the
-computer to pick a weapon randomly from its weapon cabinet.
+As a user
+So that I can enjoy myself away from the daily grind
+I would like to be able to play rock/paper/scissors
+```
 
-When both enemies are ready, the game checks the weapons and asks for the judge
-call (he will check the rulebook and hand down the verdict).
+Hints on functionality
 
-Finally the result of the fight is shown in a fancy way.
+- the user should be able to enter their name before the game
+- the user will be presented the choices (rock, paper and scissors)
+- the user can choose one option
+- the bot (Zoe 5.1) will choose a random option
+- a winner will be declared
