@@ -35,8 +35,8 @@ describe Game do
 
   describe '#self.store' do
     it 'stores an instance of Game' do
-      Game.store(subject)
-      expect(Game.show).to eq subject
+      Game.store(some_player)
+      expect(Game.show.player).to eq some_player
     end
   end
 end
